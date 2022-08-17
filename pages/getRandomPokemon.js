@@ -7,6 +7,18 @@ const useGetRandomPokemon = () => {
   //random will be array of pokemon objects to ne later iterated over
   const [random, setRandom] = useState([]);
 
-  const fetchData = () => {};
-  return <div></div>;
+  const fetchData = () => {
+    try {
+      //array of elements all undefined
+      let nums = Array.from({ length: 10 });
+      console.log(nums);
+    } catch {}
+  };
+  return (
+    <div>
+      <p>{fetchData()}</p>
+    </div>
+  );
 };
+
+export default useGetRandomPokemon;
