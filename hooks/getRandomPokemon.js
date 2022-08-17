@@ -20,17 +20,16 @@ const useGetRandomPokemon = () => {
       let nums = Array.from({ length: 10 }, () =>
         Math.floor(Math.random() * 905)
       );
-      console.log(nums);
+
       let urls = nums.map((num) => "https://pokeapi.co/api/v2/pokemon/" + num);
-      console.log(urls);
+
       const promises = urls.map((request) => {
         return axios.get(request).then((response) => {
           return response.data;
         });
       });
-      console.log(promises);
+
       const res = await Promise.all(promises).then((response) => {
-        console.log(response);
         setRandom(response);
         setLoading(false);
       });
