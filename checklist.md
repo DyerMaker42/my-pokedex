@@ -1,8 +1,10 @@
 ## PseudoCode
 
-Install Libraries
+Install Libraries x
 
-Tailwind Css, Axios
+Tailwind Css, Axiosx
+
+Create placeholder for card of pokemonx
 
 Display 10 Random Pokemon
 
