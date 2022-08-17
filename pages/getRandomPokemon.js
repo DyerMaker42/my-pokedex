@@ -7,7 +7,7 @@ const useGetRandomPokemon = () => {
   //random will be array of pokemon objects to ne later iterated over
   const [random, setRandom] = useState([]);
 
-  const fetchData = () => {
+  const fetchData = async () => {
     //array of numbers
     //create promise
     //  one promise per number to api endpoint for a pokemon number
@@ -28,18 +28,16 @@ const useGetRandomPokemon = () => {
           return response.data;
         });
       });
-      console.log(promises)
+      console.log(promises);
       const res = await Promise.all(promises).then((response) => {
         console.log(response);
         setRandom(response);
       });
-    } catch {}
+    } catch {
+      throw Error("Random Pokemon Promise failed");
+    }
   };
-  return (
-    <div>
-      <p>{fetchData()}</p>
-    </div>
-  );
+  return { random, loading, fetchData };
 };
 
 export default useGetRandomPokemon;
