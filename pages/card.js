@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PokeCard = (props) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center m-1 p-1.25 rounded-md">
       <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
         <Image
           // className=" w-full h-full md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"

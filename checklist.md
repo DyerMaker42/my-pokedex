@@ -4,7 +4,7 @@ Install Libraries x
 
 Tailwind Css, Axiosx
 
-Create placeholder for card of pokemon
+Create placeholder for card of pokemonx
 
 Display 10 Random Pokemon
 
