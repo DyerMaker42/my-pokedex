@@ -15,7 +15,7 @@ export default function Home() {
     if (random.length === 0 && loading) {
       fetchData();
     }
-  }, [loading, random]);
+  }, []);
 
   return (
     <div>
@@ -26,14 +26,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Pokédex!</h1>
+        <h1 className={styles.title}>Pokédex</h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          Searchbar with autocomplete coming soon
         </p>
         <div className={styles.grid}>
           <div>
+            {/* only renders if loading is false
+            which only happens if promise is resolved to avoid errors */}
             {!loading &&
               random.map((v, id) => {
                 return <a key={id}>{PokeCard(v)}</a>;
