@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "next": "12.2.5",
+    "pokedex-promise-v2": "^4.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tw-elements": "^1.0.0-alpha12"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
