@@ -2,8 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import PokeCard from "./card";
-
+import useGetRandomPokemon from "./getRandomPokemon";
 export default function Home() {
+  // random -> array of 10 poke objects
+  // loading will be false til promise resolves
+  // fetchData calls the function
+  const { random, loading, fetchData } = useGetRandomPokemon();
   const placeholder = {
     abilities: [
       {
