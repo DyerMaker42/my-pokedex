@@ -23,6 +23,16 @@ const useGetRandomPokemon = () => {
       console.log(nums);
       let urls = nums.map((num) => "https://pokeapi.co/api/v2/pokemon/" + num);
       console.log(urls);
+      const promises = urls.map((request) => {
+        return axios.get(request).then((response) => {
+          return response.data;
+        });
+      });
+      console.log(promises)
+      const res = await Promise.all(promises).then((response) => {
+        console.log(response);
+        setRandom(response);
+      });
     } catch {}
   };
   return (
