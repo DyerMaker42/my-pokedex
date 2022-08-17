@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import PokeCard from "./card";
 import useGetRandomPokemon from "./getRandomPokemon";
+import { useEffect } from "react";
 export default function Home() {
   // random -> array of 10 poke objects
   // loading will be false til promise resolves
@@ -14624,6 +14625,12 @@ export default function Home() {
     ],
     weight: 905,
   };
+  useEffect(() => {
+    if (random.length === 0 && loading) {
+      fetchData();
+    }
+  }, [loading, random]);
+
   return (
     <div>
       <Head>
