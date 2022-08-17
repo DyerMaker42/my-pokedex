@@ -32,6 +32,7 @@ const useGetRandomPokemon = () => {
       const res = await Promise.all(promises).then((response) => {
         console.log(response);
         setRandom(response);
+        setLoading(false);
       });
     } catch {
       throw Error("Random Pokemon Promise failed");

@@ -9,7 +9,6 @@ export default function Home() {
   // loading will be false til promise resolves
   // fetchData calls the function
   const { random, loading, fetchData } = useGetRandomPokemon();
-  
   //think this is why page running twice, that or fast refresh with next
   // normally would investigate but limited time remaiing
   useEffect(() => {
@@ -34,9 +33,10 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
         <div className={styles.grid}>
-          {random.map((v, id) => {
-            return <a key={id}>{PokeCard(v)}</a>;
-          })}
+          {!loading &&
+            random.map((v, id) => {
+              return <a key={id}>{PokeCard(v)}</a>;
+            })}
         </div>
       </main>
     </div>
