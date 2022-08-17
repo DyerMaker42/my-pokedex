@@ -4,6 +4,7 @@ module.exports = {
     "pages/index.js",
     "./pages/**/*.{html,js}",
     "./node_modules/tw-elements/dist/js/**/*.js",
+    "./hooks/**/*.{html,js}",
   ],
   theme: {
     extend: {},

@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import PokeCard from "./card";
-import useGetRandomPokemon from "./getRandomPokemon";
+import PokeCard from "../hooks/card";
+import useGetRandomPokemon from "../hooks/getRandomPokemon";
 import { useEffect } from "react";
 export default function Home() {
   // random -> array of 10 poke objects
@@ -33,10 +33,12 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
         <div className={styles.grid}>
-          {!loading &&
-            random.map((v, id) => {
-              return <a key={id}>{PokeCard(v)}</a>;
-            })}
+          <div>
+            {!loading &&
+              random.map((v, id) => {
+                return <a key={id}>{PokeCard(v)}</a>;
+              })}
+          </div>
         </div>
       </main>
     </div>
