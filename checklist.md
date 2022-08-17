@@ -1,8 +1,8 @@
 ## PseudoCode
 
-Install Libraries
+Install Libraries x
 
-Tailwind Css, Axios
+Tailwind Css, Axiosx
 
 Display 10 Random Pokemon
 
