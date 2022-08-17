@@ -2,6 +2,9 @@ import next from "next";
 import Image from "next/image";
 
 const PokeCard = (props) => {
+  const handleChangeImage = () => {
+    //cycle through array of keys when arrow buttons clicked
+  };
   return (
     <div className="flex justify-center m-1 p-1.25 rounded-md">
       <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
