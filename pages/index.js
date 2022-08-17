@@ -14625,6 +14625,8 @@ export default function Home() {
     ],
     weight: 905,
   };
+  //think this is why page running twice, that or fast refresh with next
+  // normally would investigate but limited time remaiing
   useEffect(() => {
     if (random.length === 0 && loading) {
       fetchData();
@@ -14647,9 +14649,13 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
         <div className={styles.grid}>
+          {random.map((v, id) => {
+            return <a key={id}>{PokeCard(v)}</a>;
+          })}
+
+          {/* {PokeCard(placeholder)}
           {PokeCard(placeholder)}
-          {PokeCard(placeholder)}
-          {PokeCard(placeholder)}
+          {PokeCard(placeholder)} */}
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
