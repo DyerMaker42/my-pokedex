@@ -6,7 +6,7 @@ Tailwind Css, Axiosx
 
 Create placeholder for card of pokemonx
 
-Display 10 Random Pokemon
+Display 10 Random Pokemon x
 
 Create Singular Pokemon Card
 
